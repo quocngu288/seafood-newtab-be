@@ -96,6 +96,8 @@ NEXT_PUBLIC_API_ORIGIN=https://your-backend.up.railway.app
 
 | Lỗi | Cách xử lý |
 |-----|------------|
+| `EBADENGINE` Node 18 | Project cần **Node 20+** — đã có `.node-version` và `nixpacks.toml` |
+| `EBUSY` `node_modules/.cache` | Đã set `NPM_CONFIG_CACHE=/tmp/npm-cache` trong build |
 | Crash: `JWT_SECRET is required` | Set đủ biến production (mục 4) |
 | `MONGODB_URI` connection failed | Kiểm tra Reference tới MongoDB service |
 | Upload ảnh mất sau redeploy | Gắn Volume `/app/uploads` |

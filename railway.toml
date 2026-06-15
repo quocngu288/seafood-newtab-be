@@ -1,6 +1,7 @@
 [build]
 builder = "nixpacks"
-buildCommand = "npm ci && npm run build"
+# NPM_CONFIG_CACHE tránh EBUSY khi Railway mount cache tại node_modules/.cache
+buildCommand = "NPM_CONFIG_CACHE=/tmp/npm-cache npm ci && npm run build"
 
 [deploy]
 startCommand = "npm run start:prod"
