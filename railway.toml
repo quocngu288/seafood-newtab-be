@@ -1,10 +1,8 @@
 [build]
-builder = "nixpacks"
-# NPM_CONFIG_CACHE tránh EBUSY khi Railway mount cache tại node_modules/.cache
-buildCommand = "NPM_CONFIG_CACHE=/tmp/npm-cache npm ci && npm run build"
+builder = "dockerfile"
+dockerfilePath = "Dockerfile"
 
 [deploy]
-startCommand = "npm run start:prod"
 healthcheckPath = "/api/health"
 healthcheckTimeout = 120
 restartPolicyType = "on_failure"
