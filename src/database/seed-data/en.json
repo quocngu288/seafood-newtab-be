@@ -1,0 +1,374 @@
+{
+  "meta": {
+    "title": "Hai Huong Seafood",
+    "description": "Hai Huong Seafood Joint Stock Company - Our Quality, Your Safety"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "products": "Products",
+    "markets": "Markets",
+    "news": "News",
+    "contact": "Contact",
+    "search": "Search"
+  },
+  "company": {
+    "name": "HAI HUONG SEAFOOD JOINT STOCK COMPANY",
+    "tagline": "OUR QUALITY - YOUR SAFETY",
+    "logoAlt": "HH Fish - Hai Huong Seafood"
+  },
+  "hero": {
+    "slides": [
+      {
+        "title": "HHFISH has successfully applied the international quality management system",
+        "badges": "HACCP | BRCGS | ISO 22000 | HALAL | WALMART AUDIT....",
+        "imageAlt": "Hai Huong seafood processing factory"
+      },
+      {
+        "title": "Exporting premium seafood products to over 50 countries worldwide",
+        "badges": "EU | USA | MIDDLE EAST | ASIA | EUROPE",
+        "imageAlt": "Export cargo ships"
+      },
+      {
+        "title": "Natural fish farming areas meeting food safety standards",
+        "badges": "ASC | BAP | VIETGAP | GLOBALG.A.P",
+        "imageAlt": "Aquaculture farming area"
+      },
+      {
+        "title": "Pangasius fillet products meeting international standards",
+        "badges": "PANGASIUS | VALUE ADDED | FISH MEAL & OIL",
+        "imageAlt": "Fresh pangasius fillets"
+      }
+    ]
+  },
+  "features": {
+    "export": {
+      "title": "Export anywhere",
+      "description": "We export high-quality seafood products to over 50 countries worldwide with a modern logistics system."
+    },
+    "farming": {
+      "title": "Fish farming area",
+      "description": "Natural fish farming areas meeting standards, ensuring fresh and clean raw materials for production."
+    },
+    "fillets": {
+      "title": "Fish Fillets",
+      "description": "Pangasius Fillets, Pangasius Value added, Pangasius Fish Meal & Fish Oil, Pangasius Others.....",
+      "cta": "See more"
+    }
+  },
+  "sections": {
+    "about": {
+      "label": "About us",
+      "title": "Over 20 years of experience in seafood industry",
+      "description": "Hai Huong Seafood Joint Stock Company is a leading Vietnamese seafood processing and export enterprise, specializing in pangasius products with strict quality control.",
+      "cta": "Learn more"
+    },
+    "products": {
+      "label": "Products",
+      "title": "Main product categories",
+      "items": [
+        {
+          "name": "Pangasius Fillet",
+          "desc": "Fresh frozen fillet, skinless, boneless"
+        },
+        { "name": "Value Added", "desc": "Processed value-added products" },
+        { "name": "Fish Meal & Oil", "desc": "Animal feed raw materials" },
+        {
+          "name": "Other Products",
+          "desc": "Customized to customer requirements"
+        }
+      ],
+      "cta": "View all products"
+    },
+    "stats": {
+      "title": "Key figures",
+      "items": [
+        { "value": "20+", "label": "Years of experience" },
+        { "value": "50+", "label": "Export countries" },
+        { "value": "5000+", "label": "Employees" },
+        { "value": "100%", "label": "Quality control" }
+      ]
+    },
+    "news": {
+      "label": "News",
+      "title": "News & Events",
+      "items": [
+        {
+          "title": "Hai Huong achieves new BRCGS certification",
+          "date": "15/05/2026",
+          "excerpt": "The company completed assessment and received BRCGS Food Safety certification."
+        },
+        {
+          "title": "International seafood expo in Brussels",
+          "date": "02/04/2026",
+          "excerpt": "Hai Huong showcased premium pangasius fillet products at Seafood Expo."
+        },
+        {
+          "title": "ASC-certified farming area expansion",
+          "date": "20/03/2026",
+          "excerpt": "Strengthening sustainable raw material supply for export."
+        }
+      ],
+      "cta": "View all news"
+    },
+    "contact": {
+      "label": "Contact",
+      "title": "Partner with Hai Huong Seafood",
+      "description": "Contact us for product consultation and export cooperation.",
+      "cta": "Contact us"
+    }
+  },
+  "homeNews": {
+    "title": "News",
+    "all": "ALL",
+    "slider": [
+      {
+        "title": "Vietnam's Seafood Exports to the EU Market"
+      },
+      {
+        "title": "Hai Huong at International Seafood Expo"
+      },
+      {
+        "title": "Processing plant expansion meets global standards"
+      },
+      {
+        "title": "New BRCGS certification achieved"
+      }
+    ],
+    "featured": {
+      "title": "Seafood market segments: Survey results across 5 European countries",
+      "meta": "21/09/2018 | 14:03 GMT +07",
+      "body": "According to a survey across five European countries, consumers are increasingly focused on the origin and sustainability certifications of seafood products. This presents an opportunity for Vietnamese exporters to strengthen brand value and reputation.",
+      "badgeMsc": "MSC WINNER",
+      "badgeAsc": "ASC WINNER"
+    },
+    "quoteLines": [
+      "We are honored to be a leading and",
+      "reliable partner in aquaculture, processing and exporting",
+      "seafood"
+    ],
+    "certifications": ["HACCP", "BRC", "HALAL", "ISO 22000", "GLOBALG.A.P"]
+  },
+  "pages": {
+    "about": {
+      "title": "About Us",
+      "subtitle": "About Hai Huong Seafood Joint Stock Company",
+      "content": "We are a leading enterprise in seafood processing and export in Vietnam, with modern factory systems and experienced professionals."
+    },
+    "products": {
+      "title": "Products",
+      "subtitle": "Diverse product portfolio",
+      "labels": {
+        "description": "Specification",
+        "size": "Size",
+        "price": "Price",
+        "date": "Date",
+        "contact": "Contact"
+      },
+      "items": [
+        {
+          "id": 1,
+          "name": "Introduction on Pangasius",
+          "description": "Overview of pangasius product range",
+          "size": "—",
+          "price": "—",
+          "date": "06 May"
+        },
+        {
+          "id": 2,
+          "name": "Pangasius Loin",
+          "description": "Boneless loin cut. Packing: IQF bulk 10kg",
+          "size": "150-200gr",
+          "price": "92.000 ₫",
+          "date": "06 May"
+        },
+        {
+          "id": 3,
+          "name": "Pangasius Skewered",
+          "description": "Skewered portion, marinated. Packing: IQF 1kg x 10",
+          "size": "80-100gr/pc",
+          "price": "78.000 ₫",
+          "date": "06 May"
+        },
+        {
+          "id": 4,
+          "name": "Untrimmed Pangasius Fillets",
+          "description": "Untrimmed fillet, skin on. Packing: IQF bulk 10kg",
+          "size": "700-900gr",
+          "price": "82.000 ₫",
+          "date": "06 May"
+        },
+        {
+          "id": 5,
+          "name": "Pangasius Cubes",
+          "description": "Skinless, boneless cubes. Packing: IQF 1kg x 10",
+          "size": "20-30gr/pc",
+          "price": "85.000 ₫",
+          "date": "06 May"
+        },
+        {
+          "id": 6,
+          "name": "Pangasius Portion",
+          "description": "Portion cut, ready to cook. Packing: IQF bulk 10kg",
+          "size": "120-150gr",
+          "price": "86.000 ₫",
+          "date": "06 May"
+        },
+        {
+          "id": 7,
+          "name": "Pangasius Steak",
+          "description": "Steak cut, skin on. Packing: IQF bulk 10kg",
+          "size": "180-220gr",
+          "price": "88.000 ₫",
+          "date": "06 May"
+        },
+        {
+          "id": 8,
+          "name": "Welltrimmed Pangasius Fillets",
+          "description": "Skin on, bone on, head off, gut off, tail on/off. Packing: IQF bulk 10kg",
+          "size": "800-1000gr",
+          "price": "99.000 ₫",
+          "date": "06 May"
+        },
+        {
+          "id": 9,
+          "name": "Pangasius HGT",
+          "description": "Headed, gutted, tail on. Packing: IQF bulk 10kg",
+          "size": "500-800gr",
+          "price": "72.000 ₫",
+          "date": "06 May"
+        },
+        {
+          "id": 10,
+          "name": "Pangasius Roll",
+          "description": "Rolled fillet portion. Packing: IQF bulk 10kg",
+          "size": "100-130gr",
+          "price": "90.000 ₫",
+          "date": "06 May"
+        },
+        {
+          "id": 11,
+          "name": "Semitrimmed Pangasius Fillets",
+          "description": "Partially trimmed fillet. Packing: IQF bulk 10kg",
+          "size": "750-950gr",
+          "price": "94.000 ₫",
+          "date": "06 May"
+        },
+        {
+          "id": 12,
+          "name": "Pangasius Belly",
+          "description": "Belly cut, cleaned. Packing: IQF bulk 10kg",
+          "size": "100-150gr",
+          "price": "76.000 ₫",
+          "date": "06 May"
+        }
+      ]
+    },
+    "markets": {
+      "title": "Markets",
+      "subtitle": "Global export reach",
+      "content": "Our products are present in over 50 countries across continents."
+    },
+    "news": {
+      "title": "News",
+      "subtitle": "Latest updates",
+      "sidebarLabel": "FEATURED ARTICLE",
+      "sidebarCta": "See more",
+      "articles": [
+        {
+          "title": "Seafood market segments: Survey results across 5 European countries",
+          "date": "07/05/2026",
+          "body": "According to a survey across five European countries, consumers are increasingly focused on the origin and sustainability certifications of seafood products. This presents an opportunity for Vietnamese exporters to strengthen brand value and reputation.",
+          "badgeMsc": "MSC WINNER",
+          "badgeAsc": "ASC WINNER",
+          "bullets": [
+            "European consumers prioritize products with sustainability certification.",
+            "Vietnamese pangasius fillet maintains competitive advantage in price and quality."
+          ]
+        },
+        {
+          "title": "Hai Huong achieves new BRCGS certification",
+          "date": "15/05/2026",
+          "body": "The company completed assessment and received the latest BRCGS Food Safety certification, reaffirming end-to-end quality control across the production chain.",
+          "badgeMsc": "MSC WINNER",
+          "badgeAsc": "ASC WINNER",
+          "bullets": [
+            "HACCP processes applied throughout the factory.",
+            "QA team trained to the latest international standards."
+          ]
+        },
+        {
+          "title": "International seafood expo in Brussels",
+          "date": "02/04/2026",
+          "body": "Hai Huong showcased premium pangasius fillet and value-added products at Seafood Expo Global, attracting interest from many European partners.",
+          "badgeMsc": "MSC WINNER",
+          "badgeAsc": "ASC WINNER",
+          "bullets": [
+            "Met with over 30 potential partners in the EU region.",
+            "Launched new value-added product line for B2B markets."
+          ]
+        },
+        {
+          "title": "ASC-certified farming area expansion",
+          "date": "20/03/2026",
+          "body": "The expansion project in Vinh Long strengthens sustainable raw material supply to meet growing export market requirements.",
+          "badgeMsc": "MSC WINNER",
+          "badgeAsc": "ASC WINNER",
+          "bullets": [
+            "ASC farming area expanded by 120 hectares.",
+            "Real-time water quality monitoring technology deployed."
+          ]
+        }
+      ],
+      "pagination": {
+        "first": "FIRST",
+        "last": "LAST"
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Please enter your details here. We will get in touch with you shortly",
+      "mapTitle": "Hai Huong Seafood map",
+      "form": {
+        "fullName": "Full name",
+        "phone": "Phone",
+        "email": "Email",
+        "address": "Address",
+        "message": "Message",
+        "newsletter": "Send me your newsletter",
+        "send": "Send"
+      }
+    }
+  },
+  "footer": {
+    "saleOnline": "Sale online",
+    "contact": "Contact",
+    "address": "Lot No.A8-A9, An Hiep Industrial Zone, Phu Tuc, Vinh Long, Viet Nam",
+    "email": "Haihuongsale@hhfish.com.vn",
+    "website": "https://hhfish.com/",
+    "hotline": "Hotline 24/24 (Mrs.Mùi): +84.909.496.999",
+    "sales": [
+      {
+        "name": "BUI THI THUY HUONG",
+        "title": "Vice Sales Director",
+        "phone": "+84.939.256.363"
+      },
+      {
+        "name": "NGUYEN BICH VAN",
+        "title": "Sales Executive",
+        "phone": "+84.962.693.038"
+      },
+      {
+        "name": "TRINH MINH NGHIA",
+        "title": "Vice Director of Import and Export",
+        "phone": "+84.918.628.627"
+      }
+    ],
+    "social": {
+      "email": "Email",
+      "facebook": "Facebook",
+      "linkedin": "LinkedIn",
+      "x": "X"
+    }
+  }
+}

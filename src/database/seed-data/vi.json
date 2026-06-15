@@ -1,0 +1,374 @@
+{
+  "meta": {
+    "title": "Hải Hương Seafood",
+    "description": "Công ty CP Hải Hương Seafood - Chất lượng của chúng tôi, An toàn của bạn"
+  },
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "products": "Sản phẩm",
+    "markets": "Thị trường",
+    "news": "Tin tức",
+    "contact": "Liên hệ",
+    "search": "Tìm kiếm"
+  },
+  "company": {
+    "name": "CÔNG TY CP HẢI HƯƠNG SEAFOOD",
+    "tagline": "CHẤT LƯỢNG CỦA CHÚNG TÔI - AN TOÀN CỦA BẠN",
+    "logoAlt": "HH Fish - Hải Hương Seafood"
+  },
+  "hero": {
+    "slides": [
+      {
+        "title": "HHFISH đã áp dụng thành công hệ thống quản lý chất lượng quốc tế",
+        "badges": "HACCP | BRCGS | ISO 22000 | HALAL | WALMART AUDIT....",
+        "imageAlt": "Nhà máy chế biến thủy sản Hải Hương"
+      },
+      {
+        "title": "Xuất khẩu thủy sản chất lượng cao ra hơn 50 quốc gia",
+        "badges": "EU | MỸ | TRUNG ĐÔNG | CHÂU Á | CHÂU ÂU",
+        "imageAlt": "Tàu xuất khẩu hàng hóa"
+      },
+      {
+        "title": "Vùng nuôi cá tự nhiên đạt chuẩn an toàn thực phẩm",
+        "badges": "ASC | BAP | VIETGAP | GLOBALG.A.P",
+        "imageAlt": "Vùng nuôi trồng thủy sản"
+      },
+      {
+        "title": "Sản phẩm cá tra fillet đạt tiêu chuẩn quốc tế",
+        "badges": "PANGASIUS | VALUE ADDED | FISH MEAL & OIL",
+        "imageAlt": "Cá tra fillet tươi"
+      }
+    ]
+  },
+  "features": {
+    "export": {
+      "title": "Xuất khẩu toàn cầu",
+      "description": "Chúng tôi xuất khẩu sản phẩm thủy sản chất lượng cao đến hơn 50 quốc gia trên thế giới với hệ thống logistics hiện đại."
+    },
+    "farming": {
+      "title": "Vùng nuôi trồng",
+      "description": "Vùng nuôi cá tự nhiên đạt chuẩn, đảm bảo nguồn nguyên liệu tươi sạch cho sản xuất và chế biến."
+    },
+    "fillets": {
+      "title": "Cá Fillet",
+      "description": "Cá Tra Fillet, Cá Tra Value Added, Bột cá & Dầu cá, Các sản phẩm Cá Tra khác.....",
+      "cta": "Xem thêm"
+    }
+  },
+  "sections": {
+    "about": {
+      "label": "Về chúng tôi",
+      "title": "Hơn 20 năm kinh nghiệm trong ngành thủy sản",
+      "description": "Công ty CP Hải Hương Seafood là đơn vị chế biến và xuất khẩu thủy sản hàng đầu Việt Nam, chuyên sản xuất các sản phẩm từ cá tra với quy trình kiểm soát chất lượng nghiêm ngặt.",
+      "cta": "Tìm hiểu thêm"
+    },
+    "products": {
+      "label": "Sản phẩm",
+      "title": "Danh mục sản phẩm chính",
+      "items": [
+        {
+          "name": "Cá Tra Fillet",
+          "desc": "Fillet tươi đông, không da, không xương"
+        },
+        {
+          "name": "Cá Tra Value Added",
+          "desc": "Sản phẩm chế biến giá trị gia tăng"
+        },
+        { "name": "Bột cá & Dầu cá", "desc": "Nguyên liệu thức ăn chăn nuôi" },
+        { "name": "Sản phẩm khác", "desc": "Đa dạng theo yêu cầu khách hàng" }
+      ],
+      "cta": "Xem tất cả sản phẩm"
+    },
+    "stats": {
+      "title": "Con số nổi bật",
+      "items": [
+        { "value": "20+", "label": "Năm kinh nghiệm" },
+        { "value": "50+", "label": "Quốc gia xuất khẩu" },
+        { "value": "5000+", "label": "Nhân viên" },
+        { "value": "100%", "label": "Kiểm soát chất lượng" }
+      ]
+    },
+    "news": {
+      "label": "Tin tức",
+      "title": "Tin tức & Sự kiện",
+      "items": [
+        {
+          "title": "Hải Hương đạt chứng nhận BRCGS phiên bản mới",
+          "date": "15/05/2026",
+          "excerpt": "Công ty hoàn thành đánh giá và được cấp chứng nhận BRCGS Food Safety."
+        },
+        {
+          "title": "Triển lãm thủy sản quốc tế tại Brussels",
+          "date": "02/04/2026",
+          "excerpt": "Hải Hương giới thiệu dòng sản phẩm cá tra fillet cao cấp tại Seafood Expo."
+        },
+        {
+          "title": "Mở rộng vùng nuôi trồng đạt chuẩn ASC",
+          "date": "20/03/2026",
+          "excerpt": "Tăng cường nguồn nguyên liệu bền vững phục vụ xuất khẩu."
+        }
+      ],
+      "cta": "Xem tất cả tin tức"
+    },
+    "contact": {
+      "label": "Liên hệ",
+      "title": "Hợp tác cùng Hải Hương Seafood",
+      "description": "Liên hệ với chúng tôi để được tư vấn về sản phẩm và hợp tác xuất khẩu.",
+      "cta": "Liên hệ ngay"
+    }
+  },
+  "homeNews": {
+    "title": "News",
+    "all": "ALL",
+    "slider": [
+      {
+        "title": "Vietnam's Seafood Exports to the EU Market"
+      },
+      {
+        "title": "Hải Hương tại Hội chợ thủy sản quốc tế"
+      },
+      {
+        "title": "Mở rộng nhà máy chế biến đạt chuẩn quốc tế"
+      },
+      {
+        "title": "Chứng nhận BRCGS phiên bản mới"
+      }
+    ],
+    "featured": {
+      "title": "Phân khúc thị trường thủy sản: Kết quả khảo sát ở 5 nước châu Âu",
+      "meta": "21/09/2018 | 14:03 GMT +07",
+      "body": "Theo kết quả khảo sát tại 5 nước châu Âu, người tiêu dùng ngày càng quan tâm đến nguồn gốc và chứng nhận bền vững của sản phẩm thủy sản. Đây là cơ hội cho các doanh nghiệp xuất khẩu Việt Nam nâng cao giá trị và uy tín thương hiệu.",
+      "badgeMsc": "MSC WINNER",
+      "badgeAsc": "ASC WINNER"
+    },
+    "quoteLines": [
+      "We are honored to be a leading and",
+      "reliable partner in aquaculture, processing and exporting",
+      "seafood"
+    ],
+    "certifications": ["HACCP", "BRC", "HALAL", "ISO 22000", "GLOBALG.A.P"]
+  },
+  "pages": {
+    "about": {
+      "title": "Giới thiệu",
+      "subtitle": "Về Công ty CP Hải Hương Seafood",
+      "content": "Chúng tôi là đơn vị hàng đầu trong lĩnh vực chế biến và xuất khẩu thủy sản tại Việt Nam, với hệ thống nhà máy hiện đại và đội ngũ chuyên gia giàu kinh nghiệm."
+    },
+    "products": {
+      "title": "Sản phẩm",
+      "subtitle": "Danh mục sản phẩm đa dạng",
+      "labels": {
+        "description": "Quy cách",
+        "size": "Size",
+        "price": "Giá",
+        "date": "Ngày",
+        "contact": "Liên hệ"
+      },
+      "items": [
+        {
+          "id": 1,
+          "name": "Introduction on Pangasius",
+          "description": "Giới thiệu dòng sản phẩm cá tra",
+          "size": "—",
+          "price": "—",
+          "date": "06 May"
+        },
+        {
+          "id": 2,
+          "name": "Pangasius Loin",
+          "description": "Loin cắt không xương. Đóng gói: IQF bulk 10kg",
+          "size": "150-200gr",
+          "price": "92.000 ₫",
+          "date": "06 May"
+        },
+        {
+          "id": 3,
+          "name": "Pangasius Skewered",
+          "description": "Xiên ướp sẵn. Đóng gói: IQF 1kg x 10",
+          "size": "80-100gr/pc",
+          "price": "78.000 ₫",
+          "date": "06 May"
+        },
+        {
+          "id": 4,
+          "name": "Untrimmed Pangasius Fillets",
+          "description": "Fillet chưa tỉa, có da. Đóng gói: IQF bulk 10kg",
+          "size": "700-900gr",
+          "price": "82.000 ₫",
+          "date": "06 May"
+        },
+        {
+          "id": 5,
+          "name": "Pangasius Cubes",
+          "description": "Khối không da, không xương. Đóng gói: IQF 1kg x 10",
+          "size": "20-30gr/pc",
+          "price": "85.000 ₫",
+          "date": "06 May"
+        },
+        {
+          "id": 6,
+          "name": "Pangasius Portion",
+          "description": "Phần cắt sẵn. Đóng gói: IQF bulk 10kg",
+          "size": "120-150gr",
+          "price": "86.000 ₫",
+          "date": "06 May"
+        },
+        {
+          "id": 7,
+          "name": "Pangasius Steak",
+          "description": "Steak cắt, có da. Đóng gói: IQF bulk 10kg",
+          "size": "180-220gr",
+          "price": "88.000 ₫",
+          "date": "06 May"
+        },
+        {
+          "id": 8,
+          "name": "Welltrimmed Pangasius Fillets",
+          "description": "Skin on, bone on, head off, gut off, tail on/off. Đóng gói: IQF bulk 10kg",
+          "size": "800-1000gr",
+          "price": "99.000 ₫",
+          "date": "06 May"
+        },
+        {
+          "id": 9,
+          "name": "Pangasius HGT",
+          "description": "Có đầu, bỏ ruột, đuôi. Đóng gói: IQF bulk 10kg",
+          "size": "500-800gr",
+          "price": "72.000 ₫",
+          "date": "06 May"
+        },
+        {
+          "id": 10,
+          "name": "Pangasius Roll",
+          "description": "Cuộn fillet. Đóng gói: IQF bulk 10kg",
+          "size": "100-130gr",
+          "price": "90.000 ₫",
+          "date": "06 May"
+        },
+        {
+          "id": 11,
+          "name": "Semitrimmed Pangasius Fillets",
+          "description": "Fillet tỉa một phần. Đóng gói: IQF bulk 10kg",
+          "size": "750-950gr",
+          "price": "94.000 ₫",
+          "date": "06 May"
+        },
+        {
+          "id": 12,
+          "name": "Pangasius Belly",
+          "description": "Cắt bụng, làm sạch. Đóng gói: IQF bulk 10kg",
+          "size": "100-150gr",
+          "price": "76.000 ₫",
+          "date": "06 May"
+        }
+      ]
+    },
+    "markets": {
+      "title": "Thị trường",
+      "subtitle": "Phạm vi xuất khẩu toàn cầu",
+      "content": "Sản phẩm của chúng tôi có mặt tại hơn 50 quốc gia trên các châu lục."
+    },
+    "news": {
+      "title": "Tin tức",
+      "subtitle": "Cập nhật mới nhất",
+      "sidebarLabel": "FEATURED ARTICLE",
+      "sidebarCta": "Xem thêm",
+      "articles": [
+        {
+          "title": "Phân khúc thị trường thủy sản: Kết quả khảo sát ở 5 nước châu Âu",
+          "date": "07/05/2026",
+          "body": "Theo kết quả khảo sát tại 5 nước châu Âu, người tiêu dùng ngày càng quan tâm đến nguồn gốc và chứng nhận bền vững của sản phẩm thủy sản. Đây là cơ hội cho các doanh nghiệp xuất khẩu Việt Nam nâng cao giá trị và uy tín thương hiệu.",
+          "badgeMsc": "MSC WINNER",
+          "badgeAsc": "ASC WINNER",
+          "bullets": [
+            "Người tiêu dùng châu Âu ưu tiên sản phẩm có chứng nhận bền vững.",
+            "Cá tra fillet Việt Nam duy trì vị thế cạnh tranh về giá và chất lượng."
+          ]
+        },
+        {
+          "title": "Hải Hương đạt chứng nhận BRCGS phiên bản mới",
+          "date": "15/05/2026",
+          "body": "Công ty hoàn thành đánh giá và được cấp chứng nhận BRCGS Food Safety phiên bản mới, khẳng định cam kết kiểm soát chất lượng toàn diện trong chuỗi sản xuất.",
+          "badgeMsc": "MSC WINNER",
+          "badgeAsc": "ASC WINNER",
+          "bullets": [
+            "Quy trình HACCP được áp dụng xuyên suốt tại nhà máy.",
+            "Đội ngũ QA được đào tạo theo tiêu chuẩn quốc tế mới nhất."
+          ]
+        },
+        {
+          "title": "Triển lãm thủy sản quốc tế tại Brussels",
+          "date": "02/04/2026",
+          "body": "Hải Hương giới thiệu dòng sản phẩm cá tra fillet cao cấp và sản phẩm chế biến giá trị gia tăng tại Seafood Expo Global, thu hút sự quan tâm của nhiều đối tác châu Âu.",
+          "badgeMsc": "MSC WINNER",
+          "badgeAsc": "ASC WINNER",
+          "bullets": [
+            "Gặp gỡ hơn 30 đối tác tiềm năng tại khu vực EU.",
+            "Ra mắt dòng sản phẩm value added mới cho thị trường B2B."
+          ]
+        },
+        {
+          "title": "Mở rộng vùng nuôi trồng đạt chuẩn ASC",
+          "date": "20/03/2026",
+          "body": "Dự án mở rộng vùng nuôi trồng tại Vĩnh Long giúp tăng cường nguồn nguyên liệu bền vững, đáp ứng yêu cầu ngày càng cao từ thị trường xuất khẩu.",
+          "badgeMsc": "MSC WINNER",
+          "badgeAsc": "ASC WINNER",
+          "bullets": [
+            "Diện tích nuôi ASC mở rộng thêm 120 ha.",
+            "Ứng dụng công nghệ giám sát chất lượng nước theo thời gian thực."
+          ]
+        }
+      ],
+      "pagination": {
+        "first": "FIRST",
+        "last": "LAST"
+      }
+    },
+    "contact": {
+      "title": "Liên hệ",
+      "subtitle": "Vui lòng nhập thông tin của bạn tại đây. Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất",
+      "mapTitle": "Bản đồ Hải Hương Seafood",
+      "form": {
+        "fullName": "Họ Tên",
+        "phone": "Điện Thoại",
+        "email": "Email",
+        "address": "Địa Chỉ",
+        "message": "Tin Nhắn",
+        "newsletter": "Gửi cho tôi bản tin",
+        "send": "Gửi"
+      }
+    }
+  },
+  "footer": {
+    "saleOnline": "Sale online",
+    "contact": "Contact",
+    "address": "Lô A8-A9, KCN An Hiệp, Phú Túc, Vĩnh Long, Việt Nam",
+    "email": "Haihuongsale@hhfish.com.vn",
+    "website": "https://hhfish.com/",
+    "hotline": "Hotline 24/24 (Mrs.Mùi): +84.909.496.999",
+    "sales": [
+      {
+        "name": "BUI THI THUY HUONG",
+        "title": "Phó Giám đốc Kinh doanh",
+        "phone": "+84.939.256.363"
+      },
+      {
+        "name": "NGUYEN BICH VAN",
+        "title": "Chuyên viên Kinh doanh",
+        "phone": "+84.962.693.038"
+      },
+      {
+        "name": "TRINH MINH NGHIA",
+        "title": "Phó Giám đốc Xuất nhập khẩu",
+        "phone": "+84.918.628.627"
+      }
+    ],
+    "social": {
+      "email": "Email",
+      "facebook": "Facebook",
+      "linkedin": "LinkedIn",
+      "x": "X"
+    }
+  }
+}

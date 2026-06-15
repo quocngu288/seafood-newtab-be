@@ -1,0 +1,14 @@
+# compiled output
+/dist
+/node_modules
+
+# env
+.env
+
+# uploads (keep folder structure)
+uploads/*
+!uploads/products/
+!uploads/products/.gitkeep
+
+# logs
+*.log
