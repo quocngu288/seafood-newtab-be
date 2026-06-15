@@ -31,14 +31,15 @@ Trong service **backend** → **Variables**:
 | Biến | Giá trị |
 |------|---------|
 | `NODE_ENV` | `production` |
-| `MONGODB_URI` | `${{MongoDB.MONGO_URL}}` *(click Reference → chọn service MongoDB)* |
+| `MONGODB_URI` | **Reference** → MongoDB service → `MONGO_URL` |
 | `JWT_SECRET` | Chuỗi ngẫu nhiên dài (32+ ký tự) |
 | `ADMIN_USERNAME` | `admin` (hoặc tên khác) |
 | `ADMIN_PASSWORD` | Mật khẩu mạnh |
 | `API_PUBLIC_URL` | URL public backend, VD: `https://seafood-api-production.up.railway.app` |
 | `CORS_ORIGIN` | `http://localhost:3000` *(tạm — đổi khi deploy frontend)* |
 
-> `PORT` do Railway tự inject — **không** cần set.
+> `PORT` do Railway tự inject — **không** cần set.  
+> Có thể dùng `MONGO_URL` thay `MONGODB_URI` nếu reference trực tiếp từ MongoDB service.
 
 ### Reference MongoDB trên Railway
 
@@ -98,7 +99,8 @@ NEXT_PUBLIC_API_ORIGIN=https://your-backend.up.railway.app
 |-----|------------|
 | `EBADENGINE` Node 18 | Dùng **Dockerfile** (Node 20) — không dùng Nixpacks mặc định |
 | `EBUSY` `node_modules/.cache` | Đã chuyển sang Dockerfile để tránh cache mount của Nixpacks |
-| Crash: `JWT_SECRET is required` | Set đủ biến production (mục 4) |
-| `MONGODB_URI` connection failed | Kiểm tra Reference tới MongoDB service |
+| Healthcheck failed | Xem **Deploy Logs** — thường do thiếu env hoặc `MONGODB_URI` chưa reference MongoDB |
+| `Missing required env in production` | Set `JWT_SECRET`, `ADMIN_USERNAME`, `ADMIN_PASSWORD`, `MONGODB_URI` |
+| MongoDB connection timeout | Reference `MONGO_URL` từ MongoDB service vào `MONGODB_URI` |
 | Upload ảnh mất sau redeploy | Gắn Volume `/app/uploads` |
 | CORS error từ frontend local | Thêm `http://localhost:3000` vào `CORS_ORIGIN` |

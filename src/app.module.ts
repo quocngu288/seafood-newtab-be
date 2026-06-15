@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ThrottlerModule } from '@nestjs/throttler';
+import { resolveMongoUri } from './config/app-config';
 import { AppController } from './app.controller';
 import { AuthModule } from './auth/auth.module';
 import { ContactModule } from './contact/contact.module';
@@ -22,9 +23,9 @@ import { UploadsModule } from './uploads/uploads.module';
       imports: [ConfigModule],
       inject: [ConfigService],
       useFactory: (configService: ConfigService) => ({
-        uri:
-          configService.get<string>('MONGODB_URI') ??
-          'mongodb://127.0.0.1:27017/seafood',
+        uri: resolveMongoUri(configService),
+        serverSelectionTimeoutMS: 15000,
+        connectTimeoutMS: 15000,
       }),
     }),
     DatabaseModule,

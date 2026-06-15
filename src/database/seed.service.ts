@@ -65,7 +65,13 @@ export class SeedService implements OnModuleInit {
     private readonly articleModel: Model<NewsArticleDocument>,
   ) {}
 
-  async onModuleInit() {
+  onModuleInit() {
+    void this.runSeedIfNeeded().catch((error) => {
+      this.logger.error('Seed failed', error);
+    });
+  }
+
+  private async runSeedIfNeeded() {
     const productCount = await this.productModel.countDocuments();
     if (productCount > 0) {
       this.logger.log('Database already seeded, skipping');

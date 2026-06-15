@@ -22,6 +22,12 @@ async function bootstrap() {
   const configService = app.get(ConfigService);
   validateProductionEnv(configService);
 
+  // Healthcheck Railway (không qua global prefix /api)
+  const express = app.getHttpAdapter().getInstance();
+  express.get('/health', (_req: unknown, res: { json: (body: object) => void }) => {
+    res.json({ status: 'ok', service: 'hai-huong-seafood-api' });
+  });
+
   app.useStaticAssets(join(process.cwd(), 'uploads'), {
     prefix: '/uploads/',
   });
@@ -45,8 +51,15 @@ async function bootstrap() {
     }),
   );
 
-  const port = process.env.PORT ?? 3001;
-  await app.listen(port);
-  console.log(`API running at http://localhost:${port}/api`);
+  const port = Number(process.env.PORT) || 3001;
+  const host = '0.0.0.0';
+
+  await app.listen(port, host);
+  console.log(`API listening on http://${host}:${port}/api`);
+  console.log(`Health: http://${host}:${port}/health`);
 }
-bootstrap();
+
+bootstrap().catch((error) => {
+  console.error('Failed to start application:', error);
+  process.exit(1);
+});

@@ -8,6 +8,15 @@ function isProduction(): boolean {
   return process.env.NODE_ENV === 'production';
 }
 
+/** Railway MongoDB plugin exposes MONGO_URL; we also accept MONGODB_URI */
+export function resolveMongoUri(configService: ConfigService): string {
+  return (
+    configService.get<string>('MONGODB_URI') ??
+    configService.get<string>('MONGO_URL') ??
+    'mongodb://127.0.0.1:27017/seafood'
+  );
+}
+
 export function getJwtSecret(configService: ConfigService): string {
   const secret = configService.get<string>('JWT_SECRET');
   if (secret) return secret;
@@ -42,8 +51,13 @@ export function getAdminCredentials(configService: ConfigService): {
 export function validateProductionEnv(configService: ConfigService): void {
   if (!isProduction()) return;
 
-  const required = ['JWT_SECRET', 'ADMIN_USERNAME', 'ADMIN_PASSWORD', 'MONGODB_URI'];
+  const mongoUri = resolveMongoUri(configService);
+  const required = ['JWT_SECRET', 'ADMIN_USERNAME', 'ADMIN_PASSWORD'];
   const missing = required.filter((key) => !configService.get<string>(key));
+
+  if (!mongoUri || mongoUri.includes('127.0.0.1')) {
+    missing.push('MONGODB_URI (or MONGO_URL)');
+  }
 
   if (missing.length > 0) {
     throw new Error(`Missing required env in production: ${missing.join(', ')}`);
