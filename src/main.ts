@@ -7,6 +7,16 @@ import { join } from 'path';
 import { AppModule } from './app.module';
 import { validateProductionEnv } from './config/app-config';
 
+function resolveCorsOrigin(): boolean | string | string[] {
+  const raw = process.env.CORS_ORIGIN?.trim();
+
+  if (!raw || raw === '*') {
+    return true;
+  }
+
+  return raw.split(',').map((origin) => origin.trim()).filter(Boolean);
+}
+
 async function bootstrap() {
   const uploadsDir = join(process.cwd(), 'uploads', 'products');
   const newsUploadsDir = join(process.cwd(), 'uploads', 'news');
@@ -34,12 +44,7 @@ async function bootstrap() {
 
   app.setGlobalPrefix('api');
   app.enableCors({
-    origin: process.env.CORS_ORIGIN?.split(',') ?? [
-      'http://localhost:3000',
-      'http://127.0.0.1:3000',
-      'http://localhost:3002',
-      'http://127.0.0.1:3002',
-    ],
+    origin: resolveCorsOrigin(),
     methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   });
 
