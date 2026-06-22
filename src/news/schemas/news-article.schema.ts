@@ -11,15 +11,6 @@ export class NewsTranslationContent {
 
   @Prop({ default: '' })
   excerpt: string;
-
-  @Prop({ default: 'MSC WINNER' })
-  badgeMsc: string;
-
-  @Prop({ default: 'ASC WINNER' })
-  badgeAsc: string;
-
-  @Prop({ type: [String], default: [] })
-  bullets: string[];
 }
 
 @Schema({ timestamps: true, collection: 'news_articles' })

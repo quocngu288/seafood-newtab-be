@@ -9,7 +9,7 @@ import { nextNumericId } from '../common/mongo-id';
 import { parseLocale, type Locale } from '../common/locale';
 import { UploadsService } from '../uploads/uploads.service';
 import { CreateNewsArticleDto } from './dto/create-news-article.dto';
-import { UpdateNewsArticleDto } from './dto/update-news-article.dto';
+import { UpdateNewsArticleDto, UpdateNewsTranslationDto } from './dto/update-news-article.dto';
 import { NewsArticle, NewsArticleDocument } from './schemas/news-article.schema';
 
 export type NewsArticleResponse = {
@@ -19,9 +19,6 @@ export type NewsArticleResponse = {
   date: string;
   body: string;
   excerpt: string;
-  badgeMsc: string;
-  badgeAsc: string;
-  bullets: string[];
   thumbnailKey: string;
   thumbnailUrl: string;
 };
@@ -48,17 +45,11 @@ export type AdminNewsResponse = {
       title: string;
       body: string;
       excerpt: string;
-      badgeMsc: string;
-      badgeAsc: string;
-      bullets: string[];
     } | null;
     en: {
       title: string;
       body: string;
       excerpt: string;
-      badgeMsc: string;
-      badgeAsc: string;
-      bullets: string[];
     } | null;
   };
 };
@@ -89,11 +80,20 @@ export class NewsService {
       date: this.formatDate(article.publishedAt),
       body: translation.body,
       excerpt: translation.excerpt,
-      badgeMsc: translation.badgeMsc,
-      badgeAsc: translation.badgeAsc,
-      bullets: translation.bullets,
       thumbnailKey: article.thumbnailKey,
       thumbnailUrl: this.uploadsService.getPublicUrl(article.thumbnailKey),
+    };
+  }
+
+  private toTranslationResponse(
+    translation: NewsArticle['vi'] | null | undefined,
+  ) {
+    if (!translation) return null;
+
+    return {
+      title: translation.title,
+      body: translation.body,
+      excerpt: translation.excerpt ?? '',
     };
   }
 
@@ -106,8 +106,8 @@ export class NewsService {
       sortOrder: article.sortOrder,
       publishedAt: article.publishedAt?.toISOString() ?? null,
       translations: {
-        vi: article.vi ?? null,
-        en: article.en ?? null,
+        vi: this.toTranslationResponse(article.vi),
+        en: this.toTranslationResponse(article.en),
       },
     };
   }
@@ -181,6 +181,29 @@ export class NewsService {
     return this.toAdminResponse(article);
   }
 
+  private normalizeTranslation(dto: {
+    title: string;
+    body: string;
+    excerpt?: string;
+  }) {
+    return {
+      title: dto.title,
+      body: dto.body,
+      excerpt: dto.excerpt ?? '',
+    };
+  }
+
+  private mergeTranslation(
+    current: NewsArticle['vi'],
+    dto: UpdateNewsTranslationDto,
+  ) {
+    return {
+      title: dto.title ?? current.title,
+      body: dto.body ?? current.body,
+      excerpt: dto.excerpt ?? current.excerpt ?? '',
+    };
+  }
+
   async create(dto: CreateNewsArticleDto): Promise<AdminNewsResponse> {
     const id = await nextNumericId(this.articleModel);
 
@@ -191,8 +214,8 @@ export class NewsService {
         thumbnailKey: dto.thumbnailKey ?? '',
         sortOrder: dto.sortOrder ?? 0,
         publishedAt: dto.publishedAt ? new Date(dto.publishedAt) : null,
-        vi: dto.vi,
-        en: dto.en,
+        vi: this.normalizeTranslation(dto.vi),
+        en: this.normalizeTranslation(dto.en),
       });
 
       return this.toAdminResponse(article.toObject());
@@ -225,8 +248,8 @@ export class NewsService {
     if (dto.publishedAt !== undefined) {
       article.publishedAt = dto.publishedAt ? new Date(dto.publishedAt) : null;
     }
-    if (dto.vi) article.vi = { ...article.vi, ...dto.vi };
-    if (dto.en) article.en = { ...article.en, ...dto.en };
+    if (dto.vi) article.vi = this.mergeTranslation(article.vi, dto.vi);
+    if (dto.en) article.en = this.mergeTranslation(article.en, dto.en);
 
     try {
       await article.save();

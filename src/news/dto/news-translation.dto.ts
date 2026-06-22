@@ -1,4 +1,4 @@
-import { IsArray, IsNotEmpty, IsString, MaxLength, ArrayMaxSize } from 'class-validator';
+import { IsNotEmpty, IsOptional, IsString, MaxLength } from 'class-validator';
 
 export class NewsTranslationDto {
   @IsString()
@@ -11,21 +11,8 @@ export class NewsTranslationDto {
   @MaxLength(50000)
   body: string;
 
+  @IsOptional()
   @IsString()
   @MaxLength(500)
-  excerpt: string;
-
-  @IsString()
-  @MaxLength(100)
-  badgeMsc: string;
-
-  @IsString()
-  @MaxLength(100)
-  badgeAsc: string;
-
-  @IsArray()
-  @ArrayMaxSize(20)
-  @IsString({ each: true })
-  @MaxLength(500, { each: true })
-  bullets: string[];
+  excerpt?: string;
 }

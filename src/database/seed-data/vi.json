@@ -75,18 +75,36 @@
           "name": "Cá Tra Value Added",
           "desc": "Sản phẩm chế biến giá trị gia tăng"
         },
-        { "name": "Bột cá & Dầu cá", "desc": "Nguyên liệu thức ăn chăn nuôi" },
-        { "name": "Sản phẩm khác", "desc": "Đa dạng theo yêu cầu khách hàng" }
+        {
+          "name": "Bột cá & Dầu cá",
+          "desc": "Nguyên liệu thức ăn chăn nuôi"
+        },
+        {
+          "name": "Sản phẩm khác",
+          "desc": "Đa dạng theo yêu cầu khách hàng"
+        }
       ],
       "cta": "Xem tất cả sản phẩm"
     },
     "stats": {
       "title": "Con số nổi bật",
       "items": [
-        { "value": "20+", "label": "Năm kinh nghiệm" },
-        { "value": "50+", "label": "Quốc gia xuất khẩu" },
-        { "value": "5000+", "label": "Nhân viên" },
-        { "value": "100%", "label": "Kiểm soát chất lượng" }
+        {
+          "value": "20+",
+          "label": "Năm kinh nghiệm"
+        },
+        {
+          "value": "50+",
+          "label": "Quốc gia xuất khẩu"
+        },
+        {
+          "value": "5000+",
+          "label": "Nhân viên"
+        },
+        {
+          "value": "100%",
+          "label": "Kiểm soát chất lượng"
+        }
       ]
     },
     "news": {
@@ -138,16 +156,20 @@
     "featured": {
       "title": "Phân khúc thị trường thủy sản: Kết quả khảo sát ở 5 nước châu Âu",
       "meta": "21/09/2018 | 14:03 GMT +07",
-      "body": "Theo kết quả khảo sát tại 5 nước châu Âu, người tiêu dùng ngày càng quan tâm đến nguồn gốc và chứng nhận bền vững của sản phẩm thủy sản. Đây là cơ hội cho các doanh nghiệp xuất khẩu Việt Nam nâng cao giá trị và uy tín thương hiệu.",
-      "badgeMsc": "MSC WINNER",
-      "badgeAsc": "ASC WINNER"
+      "body": "Theo kết quả khảo sát tại 5 nước châu Âu, người tiêu dùng ngày càng quan tâm đến nguồn gốc và chứng nhận bền vững của sản phẩm thủy sản. Đây là cơ hội cho các doanh nghiệp xuất khẩu Việt Nam nâng cao giá trị và uy tín thương hiệu."
     },
     "quoteLines": [
       "We are honored to be a leading and",
       "reliable partner in aquaculture, processing and exporting",
       "seafood"
     ],
-    "certifications": ["HACCP", "BRC", "HALAL", "ISO 22000", "GLOBALG.A.P"]
+    "certifications": [
+      "HACCP",
+      "BRC",
+      "HALAL",
+      "ISO 22000",
+      "GLOBALG.A.P"
+    ]
   },
   "pages": {
     "about": {
@@ -172,7 +194,8 @@
           "description": "Giới thiệu dòng sản phẩm cá tra",
           "size": "—",
           "price": "—",
-          "date": "06 May"
+          "date": "06 May",
+          "packing": ""
         },
         {
           "id": 2,
@@ -180,7 +203,8 @@
           "description": "Loin cắt không xương. Đóng gói: IQF bulk 10kg",
           "size": "150-200gr",
           "price": "92.000 ₫",
-          "date": "06 May"
+          "date": "06 May",
+          "packing": ""
         },
         {
           "id": 3,
@@ -188,7 +212,8 @@
           "description": "Xiên ướp sẵn. Đóng gói: IQF 1kg x 10",
           "size": "80-100gr/pc",
           "price": "78.000 ₫",
-          "date": "06 May"
+          "date": "06 May",
+          "packing": ""
         },
         {
           "id": 4,
@@ -196,7 +221,8 @@
           "description": "Fillet chưa tỉa, có da. Đóng gói: IQF bulk 10kg",
           "size": "700-900gr",
           "price": "82.000 ₫",
-          "date": "06 May"
+          "date": "06 May",
+          "packing": ""
         },
         {
           "id": 5,
@@ -204,7 +230,8 @@
           "description": "Khối không da, không xương. Đóng gói: IQF 1kg x 10",
           "size": "20-30gr/pc",
           "price": "85.000 ₫",
-          "date": "06 May"
+          "date": "06 May",
+          "packing": ""
         },
         {
           "id": 6,
@@ -212,7 +239,8 @@
           "description": "Phần cắt sẵn. Đóng gói: IQF bulk 10kg",
           "size": "120-150gr",
           "price": "86.000 ₫",
-          "date": "06 May"
+          "date": "06 May",
+          "packing": ""
         },
         {
           "id": 7,
@@ -220,7 +248,8 @@
           "description": "Steak cắt, có da. Đóng gói: IQF bulk 10kg",
           "size": "180-220gr",
           "price": "88.000 ₫",
-          "date": "06 May"
+          "date": "06 May",
+          "packing": ""
         },
         {
           "id": 8,
@@ -228,7 +257,8 @@
           "description": "Skin on, bone on, head off, gut off, tail on/off. Đóng gói: IQF bulk 10kg",
           "size": "800-1000gr",
           "price": "99.000 ₫",
-          "date": "06 May"
+          "date": "06 May",
+          "packing": ""
         },
         {
           "id": 9,
@@ -236,7 +266,8 @@
           "description": "Có đầu, bỏ ruột, đuôi. Đóng gói: IQF bulk 10kg",
           "size": "500-800gr",
           "price": "72.000 ₫",
-          "date": "06 May"
+          "date": "06 May",
+          "packing": ""
         },
         {
           "id": 10,
@@ -244,7 +275,8 @@
           "description": "Cuộn fillet. Đóng gói: IQF bulk 10kg",
           "size": "100-130gr",
           "price": "90.000 ₫",
-          "date": "06 May"
+          "date": "06 May",
+          "packing": ""
         },
         {
           "id": 11,
@@ -252,7 +284,8 @@
           "description": "Fillet tỉa một phần. Đóng gói: IQF bulk 10kg",
           "size": "750-950gr",
           "price": "94.000 ₫",
-          "date": "06 May"
+          "date": "06 May",
+          "packing": ""
         },
         {
           "id": 12,
@@ -260,7 +293,8 @@
           "description": "Cắt bụng, làm sạch. Đóng gói: IQF bulk 10kg",
           "size": "100-150gr",
           "price": "76.000 ₫",
-          "date": "06 May"
+          "date": "06 May",
+          "packing": ""
         }
       ]
     },
@@ -278,46 +312,22 @@
         {
           "title": "Phân khúc thị trường thủy sản: Kết quả khảo sát ở 5 nước châu Âu",
           "date": "07/05/2026",
-          "body": "Theo kết quả khảo sát tại 5 nước châu Âu, người tiêu dùng ngày càng quan tâm đến nguồn gốc và chứng nhận bền vững của sản phẩm thủy sản. Đây là cơ hội cho các doanh nghiệp xuất khẩu Việt Nam nâng cao giá trị và uy tín thương hiệu.",
-          "badgeMsc": "MSC WINNER",
-          "badgeAsc": "ASC WINNER",
-          "bullets": [
-            "Người tiêu dùng châu Âu ưu tiên sản phẩm có chứng nhận bền vững.",
-            "Cá tra fillet Việt Nam duy trì vị thế cạnh tranh về giá và chất lượng."
-          ]
+          "body": "Theo kết quả khảo sát tại 5 nước châu Âu, người tiêu dùng ngày càng quan tâm đến nguồn gốc và chứng nhận bền vững của sản phẩm thủy sản. Đây là cơ hội cho các doanh nghiệp xuất khẩu Việt Nam nâng cao giá trị và uy tín thương hiệu."
         },
         {
           "title": "Hải Hương đạt chứng nhận BRCGS phiên bản mới",
           "date": "15/05/2026",
-          "body": "Công ty hoàn thành đánh giá và được cấp chứng nhận BRCGS Food Safety phiên bản mới, khẳng định cam kết kiểm soát chất lượng toàn diện trong chuỗi sản xuất.",
-          "badgeMsc": "MSC WINNER",
-          "badgeAsc": "ASC WINNER",
-          "bullets": [
-            "Quy trình HACCP được áp dụng xuyên suốt tại nhà máy.",
-            "Đội ngũ QA được đào tạo theo tiêu chuẩn quốc tế mới nhất."
-          ]
+          "body": "Công ty hoàn thành đánh giá và được cấp chứng nhận BRCGS Food Safety phiên bản mới, khẳng định cam kết kiểm soát chất lượng toàn diện trong chuỗi sản xuất."
         },
         {
           "title": "Triển lãm thủy sản quốc tế tại Brussels",
           "date": "02/04/2026",
-          "body": "Hải Hương giới thiệu dòng sản phẩm cá tra fillet cao cấp và sản phẩm chế biến giá trị gia tăng tại Seafood Expo Global, thu hút sự quan tâm của nhiều đối tác châu Âu.",
-          "badgeMsc": "MSC WINNER",
-          "badgeAsc": "ASC WINNER",
-          "bullets": [
-            "Gặp gỡ hơn 30 đối tác tiềm năng tại khu vực EU.",
-            "Ra mắt dòng sản phẩm value added mới cho thị trường B2B."
-          ]
+          "body": "Hải Hương giới thiệu dòng sản phẩm cá tra fillet cao cấp và sản phẩm chế biến giá trị gia tăng tại Seafood Expo Global, thu hút sự quan tâm của nhiều đối tác châu Âu."
         },
         {
           "title": "Mở rộng vùng nuôi trồng đạt chuẩn ASC",
           "date": "20/03/2026",
-          "body": "Dự án mở rộng vùng nuôi trồng tại Vĩnh Long giúp tăng cường nguồn nguyên liệu bền vững, đáp ứng yêu cầu ngày càng cao từ thị trường xuất khẩu.",
-          "badgeMsc": "MSC WINNER",
-          "badgeAsc": "ASC WINNER",
-          "bullets": [
-            "Diện tích nuôi ASC mở rộng thêm 120 ha.",
-            "Ứng dụng công nghệ giám sát chất lượng nước theo thời gian thực."
-          ]
+          "body": "Dự án mở rộng vùng nuôi trồng tại Vĩnh Long giúp tăng cường nguồn nguyên liệu bền vững, đáp ứng yêu cầu ngày càng cao từ thị trường xuất khẩu."
         }
       ],
       "pagination": {

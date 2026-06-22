@@ -10,6 +10,9 @@ export class ProductTranslationContent {
   description: string;
 
   @Prop({ default: '' })
+  packing: string;
+
+  @Prop({ default: '' })
   size: string;
 
   @Prop({ default: 0 })

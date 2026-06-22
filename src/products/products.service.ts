@@ -20,6 +20,7 @@ type TranslationLike = ProductTranslationContent & {
 export type ProductTranslationResponse = {
   name: string;
   description: string;
+  packing: string;
   size: string;
   price: string;
   priceVnd: number;
@@ -30,6 +31,7 @@ export type ProductResponse = {
   id: number;
   name: string;
   description: string;
+  packing: string;
   size: string;
   price: string;
   priceVnd: number;
@@ -76,6 +78,7 @@ export class ProductsService {
     return {
       name: translation.name,
       description: translation.description,
+      packing: translation.packing ?? '',
       size: translation.size,
       priceVnd,
       price: formatVndPrice(priceVnd, locale),
@@ -113,6 +116,7 @@ export class ProductsService {
     return {
       name: data.name,
       description: data.description,
+      packing: data.packing ?? '',
       size: data.size,
       priceVnd: data.priceVnd,
       date: data.date,

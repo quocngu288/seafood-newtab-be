@@ -1,5 +1,5 @@
 import { Type } from 'class-transformer';
-import { IsInt, IsNotEmpty, IsString, MaxLength, Min } from 'class-validator';
+import { IsInt, IsNotEmpty, IsOptional, IsString, MaxLength, Min } from 'class-validator';
 
 export class ProductTranslationDto {
   @IsString()
@@ -11,6 +11,11 @@ export class ProductTranslationDto {
   @IsNotEmpty()
   @MaxLength(2000)
   description: string;
+
+  @IsOptional()
+  @IsString()
+  @MaxLength(500)
+  packing?: string;
 
   @IsString()
   @MaxLength(100)

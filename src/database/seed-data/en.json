@@ -71,8 +71,14 @@
           "name": "Pangasius Fillet",
           "desc": "Fresh frozen fillet, skinless, boneless"
         },
-        { "name": "Value Added", "desc": "Processed value-added products" },
-        { "name": "Fish Meal & Oil", "desc": "Animal feed raw materials" },
+        {
+          "name": "Value Added",
+          "desc": "Processed value-added products"
+        },
+        {
+          "name": "Fish Meal & Oil",
+          "desc": "Animal feed raw materials"
+        },
         {
           "name": "Other Products",
           "desc": "Customized to customer requirements"
@@ -83,10 +89,22 @@
     "stats": {
       "title": "Key figures",
       "items": [
-        { "value": "20+", "label": "Years of experience" },
-        { "value": "50+", "label": "Export countries" },
-        { "value": "5000+", "label": "Employees" },
-        { "value": "100%", "label": "Quality control" }
+        {
+          "value": "20+",
+          "label": "Years of experience"
+        },
+        {
+          "value": "50+",
+          "label": "Export countries"
+        },
+        {
+          "value": "5000+",
+          "label": "Employees"
+        },
+        {
+          "value": "100%",
+          "label": "Quality control"
+        }
       ]
     },
     "news": {
@@ -138,16 +156,20 @@
     "featured": {
       "title": "Seafood market segments: Survey results across 5 European countries",
       "meta": "21/09/2018 | 14:03 GMT +07",
-      "body": "According to a survey across five European countries, consumers are increasingly focused on the origin and sustainability certifications of seafood products. This presents an opportunity for Vietnamese exporters to strengthen brand value and reputation.",
-      "badgeMsc": "MSC WINNER",
-      "badgeAsc": "ASC WINNER"
+      "body": "According to a survey across five European countries, consumers are increasingly focused on the origin and sustainability certifications of seafood products. This presents an opportunity for Vietnamese exporters to strengthen brand value and reputation."
     },
     "quoteLines": [
       "We are honored to be a leading and",
       "reliable partner in aquaculture, processing and exporting",
       "seafood"
     ],
-    "certifications": ["HACCP", "BRC", "HALAL", "ISO 22000", "GLOBALG.A.P"]
+    "certifications": [
+      "HACCP",
+      "BRC",
+      "HALAL",
+      "ISO 22000",
+      "GLOBALG.A.P"
+    ]
   },
   "pages": {
     "about": {
@@ -172,95 +194,107 @@
           "description": "Overview of pangasius product range",
           "size": "—",
           "price": "—",
-          "date": "06 May"
+          "date": "06 May",
+          "packing": ""
         },
         {
           "id": 2,
           "name": "Pangasius Loin",
-          "description": "Boneless loin cut. Packing: IQF bulk 10kg",
+          "description": "Boneless loin cut",
           "size": "150-200gr",
           "price": "92.000 ₫",
-          "date": "06 May"
+          "date": "06 May",
+          "packing": "IQF bulk 10kg"
         },
         {
           "id": 3,
           "name": "Pangasius Skewered",
-          "description": "Skewered portion, marinated. Packing: IQF 1kg x 10",
+          "description": "Skewered portion, marinated",
           "size": "80-100gr/pc",
           "price": "78.000 ₫",
-          "date": "06 May"
+          "date": "06 May",
+          "packing": "IQF 1kg x 10"
         },
         {
           "id": 4,
           "name": "Untrimmed Pangasius Fillets",
-          "description": "Untrimmed fillet, skin on. Packing: IQF bulk 10kg",
+          "description": "Untrimmed fillet, skin on",
           "size": "700-900gr",
           "price": "82.000 ₫",
-          "date": "06 May"
+          "date": "06 May",
+          "packing": "IQF bulk 10kg"
         },
         {
           "id": 5,
           "name": "Pangasius Cubes",
-          "description": "Skinless, boneless cubes. Packing: IQF 1kg x 10",
+          "description": "Skinless, boneless cubes",
           "size": "20-30gr/pc",
           "price": "85.000 ₫",
-          "date": "06 May"
+          "date": "06 May",
+          "packing": "IQF 1kg x 10"
         },
         {
           "id": 6,
           "name": "Pangasius Portion",
-          "description": "Portion cut, ready to cook. Packing: IQF bulk 10kg",
+          "description": "Portion cut, ready to cook",
           "size": "120-150gr",
           "price": "86.000 ₫",
-          "date": "06 May"
+          "date": "06 May",
+          "packing": "IQF bulk 10kg"
         },
         {
           "id": 7,
           "name": "Pangasius Steak",
-          "description": "Steak cut, skin on. Packing: IQF bulk 10kg",
+          "description": "Steak cut, skin on",
           "size": "180-220gr",
           "price": "88.000 ₫",
-          "date": "06 May"
+          "date": "06 May",
+          "packing": "IQF bulk 10kg"
         },
         {
           "id": 8,
           "name": "Welltrimmed Pangasius Fillets",
-          "description": "Skin on, bone on, head off, gut off, tail on/off. Packing: IQF bulk 10kg",
+          "description": "Skin on, bone on, head off, gut off, tail on/off",
           "size": "800-1000gr",
           "price": "99.000 ₫",
-          "date": "06 May"
+          "date": "06 May",
+          "packing": "IQF bulk 10kg"
         },
         {
           "id": 9,
           "name": "Pangasius HGT",
-          "description": "Headed, gutted, tail on. Packing: IQF bulk 10kg",
+          "description": "Headed, gutted, tail on",
           "size": "500-800gr",
           "price": "72.000 ₫",
-          "date": "06 May"
+          "date": "06 May",
+          "packing": "IQF bulk 10kg"
         },
         {
           "id": 10,
           "name": "Pangasius Roll",
-          "description": "Rolled fillet portion. Packing: IQF bulk 10kg",
+          "description": "Rolled fillet portion",
           "size": "100-130gr",
           "price": "90.000 ₫",
-          "date": "06 May"
+          "date": "06 May",
+          "packing": "IQF bulk 10kg"
         },
         {
           "id": 11,
           "name": "Semitrimmed Pangasius Fillets",
-          "description": "Partially trimmed fillet. Packing: IQF bulk 10kg",
+          "description": "Partially trimmed fillet",
           "size": "750-950gr",
           "price": "94.000 ₫",
-          "date": "06 May"
+          "date": "06 May",
+          "packing": "IQF bulk 10kg"
         },
         {
           "id": 12,
           "name": "Pangasius Belly",
-          "description": "Belly cut, cleaned. Packing: IQF bulk 10kg",
+          "description": "Belly cut, cleaned",
           "size": "100-150gr",
           "price": "76.000 ₫",
-          "date": "06 May"
+          "date": "06 May",
+          "packing": "IQF bulk 10kg"
         }
       ]
     },
@@ -278,46 +312,22 @@
         {
           "title": "Seafood market segments: Survey results across 5 European countries",
           "date": "07/05/2026",
-          "body": "According to a survey across five European countries, consumers are increasingly focused on the origin and sustainability certifications of seafood products. This presents an opportunity for Vietnamese exporters to strengthen brand value and reputation.",
-          "badgeMsc": "MSC WINNER",
-          "badgeAsc": "ASC WINNER",
-          "bullets": [
-            "European consumers prioritize products with sustainability certification.",
-            "Vietnamese pangasius fillet maintains competitive advantage in price and quality."
-          ]
+          "body": "According to a survey across five European countries, consumers are increasingly focused on the origin and sustainability certifications of seafood products. This presents an opportunity for Vietnamese exporters to strengthen brand value and reputation."
         },
         {
           "title": "Hai Huong achieves new BRCGS certification",
           "date": "15/05/2026",
-          "body": "The company completed assessment and received the latest BRCGS Food Safety certification, reaffirming end-to-end quality control across the production chain.",
-          "badgeMsc": "MSC WINNER",
-          "badgeAsc": "ASC WINNER",
-          "bullets": [
-            "HACCP processes applied throughout the factory.",
-            "QA team trained to the latest international standards."
-          ]
+          "body": "The company completed assessment and received the latest BRCGS Food Safety certification, reaffirming end-to-end quality control across the production chain."
         },
         {
           "title": "International seafood expo in Brussels",
           "date": "02/04/2026",
-          "body": "Hai Huong showcased premium pangasius fillet and value-added products at Seafood Expo Global, attracting interest from many European partners.",
-          "badgeMsc": "MSC WINNER",
-          "badgeAsc": "ASC WINNER",
-          "bullets": [
-            "Met with over 30 potential partners in the EU region.",
-            "Launched new value-added product line for B2B markets."
-          ]
+          "body": "Hai Huong showcased premium pangasius fillet and value-added products at Seafood Expo Global, attracting interest from many European partners."
         },
         {
           "title": "ASC-certified farming area expansion",
           "date": "20/03/2026",
-          "body": "The expansion project in Vinh Long strengthens sustainable raw material supply to meet growing export market requirements.",
-          "badgeMsc": "MSC WINNER",
-          "badgeAsc": "ASC WINNER",
-          "bullets": [
-            "ASC farming area expanded by 120 hectares.",
-            "Real-time water quality monitoring technology deployed."
-          ]
+          "body": "The expansion project in Vinh Long strengthens sustainable raw material supply to meet growing export market requirements."
         }
       ],
       "pagination": {

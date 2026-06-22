@@ -13,6 +13,7 @@ type ProductItem = {
   id: number;
   name: string;
   description: string;
+  packing?: string;
   size: string;
   price: string;
   date: string;
@@ -22,9 +23,6 @@ type NewsArticleItem = {
   title: string;
   date: string;
   body: string;
-  badgeMsc: string;
-  badgeAsc: string;
-  bullets: string[];
 };
 
 type MessagesFile = {
@@ -66,9 +64,33 @@ export class SeedService implements OnModuleInit {
   ) {}
 
   onModuleInit() {
-    void this.runSeedIfNeeded().catch((error) => {
-      this.logger.error('Seed failed', error);
-    });
+    void this.cleanupLegacyNewsFields()
+      .then(() => this.runSeedIfNeeded())
+      .catch((error) => {
+        this.logger.error('Seed failed', error);
+      });
+  }
+
+  private async cleanupLegacyNewsFields() {
+    const result = await this.articleModel.updateMany(
+      {},
+      {
+        $unset: {
+          'vi.badgeMsc': '',
+          'vi.badgeAsc': '',
+          'vi.bullets': '',
+          'en.badgeMsc': '',
+          'en.badgeAsc': '',
+          'en.bullets': '',
+        },
+      },
+    );
+
+    if (result.modifiedCount > 0) {
+      this.logger.log(
+        `Removed legacy news fields from ${result.modifiedCount} article(s)`,
+      );
+    }
   }
 
   private async runSeedIfNeeded() {
@@ -155,6 +177,7 @@ export class SeedService implements OnModuleInit {
         vi: {
           name: viItem.name,
           description: viItem.description,
+          packing: viItem.packing ?? '',
           size: viItem.size,
           priceVnd: parseVndPrice(viItem.price),
           date: viItem.date,
@@ -162,6 +185,7 @@ export class SeedService implements OnModuleInit {
         en: {
           name: enItem.name,
           description: enItem.description,
+          packing: enItem.packing ?? '',
           size: enItem.size,
           priceVnd: parseVndPrice(enItem.price),
           date: enItem.date,
@@ -190,17 +214,11 @@ export class SeedService implements OnModuleInit {
           title: viArticle.title,
           body: viArticle.body,
           excerpt: sectionItem?.excerpt ?? '',
-          badgeMsc: viArticle.badgeMsc,
-          badgeAsc: viArticle.badgeAsc,
-          bullets: viArticle.bullets,
         },
         en: {
           title: enArticle.title,
           body: enArticle.body,
           excerpt: enSectionItem?.excerpt ?? '',
-          badgeMsc: enArticle.badgeMsc,
-          badgeAsc: enArticle.badgeAsc,
-          bullets: enArticle.bullets,
         },
       });
     }
