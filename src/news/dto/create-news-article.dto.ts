@@ -2,7 +2,6 @@ import { Type } from 'class-transformer';
 import {
   IsDateString,
   IsInt,
-  IsNotEmpty,
   IsObject,
   IsOptional,
   IsString,
@@ -13,11 +12,6 @@ import {
 import { NewsTranslationDto } from './news-translation.dto';
 
 export class CreateNewsArticleDto {
-  @IsString()
-  @IsNotEmpty()
-  @MaxLength(120)
-  slug: string;
-
   @IsOptional()
   @IsString()
   @MaxLength(200)

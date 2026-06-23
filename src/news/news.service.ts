@@ -5,6 +5,7 @@ import {
 } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
+import { slugifyTitle } from '../common/slugify';
 import { nextNumericId } from '../common/mongo-id';
 import { parseLocale, type Locale } from '../common/locale';
 import { UploadsService } from '../uploads/uploads.service';
@@ -204,13 +205,43 @@ export class NewsService {
     };
   }
 
+  private titleForSlug(viTitle: string, enTitle: string): string {
+    return viTitle.trim() || enTitle.trim();
+  }
+
+  private async resolveSlug(
+    title: string,
+    excludeId?: number,
+  ): Promise<string> {
+    const base = slugifyTitle(title);
+    let slug = base;
+    let suffix = 1;
+
+    while (true) {
+      const filter: Record<string, unknown> = { slug };
+      if (excludeId != null) {
+        filter.id = { $ne: excludeId };
+      }
+
+      const exists = await this.articleModel.exists(filter);
+      if (!exists) {
+        return slug;
+      }
+
+      slug = `${base}-${++suffix}`;
+    }
+  }
+
   async create(dto: CreateNewsArticleDto): Promise<AdminNewsResponse> {
     const id = await nextNumericId(this.articleModel);
+    const slug = await this.resolveSlug(
+      this.titleForSlug(dto.vi.title, dto.en.title),
+    );
 
     try {
       const article = await this.articleModel.create({
         id,
-        slug: dto.slug,
+        slug,
         thumbnailKey: dto.thumbnailKey ?? '',
         sortOrder: dto.sortOrder ?? 0,
         publishedAt: dto.publishedAt ? new Date(dto.publishedAt) : null,
@@ -221,7 +252,7 @@ export class NewsService {
       return this.toAdminResponse(article.toObject());
     } catch (error) {
       if (this.isDuplicateKeyError(error)) {
-        throw new ConflictException(`Slug "${dto.slug}" đã tồn tại`);
+        throw new ConflictException('Slug đã tồn tại');
       }
       throw error;
     }
@@ -236,7 +267,6 @@ export class NewsService {
       throw new NotFoundException(`News article #${id} not found`);
     }
 
-    if (dto.slug !== undefined) article.slug = dto.slug;
     if (dto.thumbnailKey !== undefined) {
       this.uploadsService.replaceUploadedFile(
         article.thumbnailKey,
@@ -251,12 +281,19 @@ export class NewsService {
     if (dto.vi) article.vi = this.mergeTranslation(article.vi, dto.vi);
     if (dto.en) article.en = this.mergeTranslation(article.en, dto.en);
 
+    if (dto.vi?.title !== undefined || dto.en?.title !== undefined) {
+      article.slug = await this.resolveSlug(
+        this.titleForSlug(article.vi.title, article.en.title),
+        id,
+      );
+    }
+
     try {
       await article.save();
       return this.toAdminResponse(article.toObject());
     } catch (error) {
       if (this.isDuplicateKeyError(error)) {
-        throw new ConflictException(`Slug "${dto.slug}" đã tồn tại`);
+        throw new ConflictException('Slug đã tồn tại');
       }
       throw error;
     }
