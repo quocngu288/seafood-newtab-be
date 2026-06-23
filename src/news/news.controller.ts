@@ -1,4 +1,4 @@
-import { Controller, Get, Param, ParseIntPipe, Query } from '@nestjs/common';
+import { Controller, Get, Param, Query } from '@nestjs/common';
 import { LocaleQueryDto } from '../common/dto/locale-query.dto';
 import { NewsQueryDto } from './dto/news-query.dto';
 import { NewsService } from './news.service';
@@ -12,11 +12,11 @@ export class NewsController {
     return this.newsService.findAll(query.locale, query.page, query.limit);
   }
 
-  @Get(':id')
+  @Get(':slugOrId')
   findOne(
-    @Param('id', ParseIntPipe) id: number,
+    @Param('slugOrId') slugOrId: string,
     @Query() query: LocaleQueryDto,
   ) {
-    return this.newsService.findOne(id, query.locale);
+    return this.newsService.findOneBySlugOrId(slugOrId, query.locale);
   }
 }

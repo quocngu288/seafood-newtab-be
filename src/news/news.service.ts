@@ -149,6 +149,33 @@ export class NewsService {
     };
   }
 
+  async findBySlug(
+    slug: string,
+    localeInput?: string,
+  ): Promise<NewsArticleResponse> {
+    const locale = parseLocale(localeInput);
+    const article = await this.articleModel
+      .findOne({ slug, ...this.publishedFilter() })
+      .lean();
+
+    if (!article) {
+      throw new NotFoundException(`News article "${slug}" not found`);
+    }
+
+    return this.toResponse(article, locale);
+  }
+
+  async findOneBySlugOrId(
+    slugOrId: string,
+    localeInput?: string,
+  ): Promise<NewsArticleResponse> {
+    if (/^\d+$/.test(slugOrId)) {
+      return this.findOne(Number(slugOrId), localeInput);
+    }
+
+    return this.findBySlug(slugOrId, localeInput);
+  }
+
   async findOne(
     id: number,
     localeInput?: string,
