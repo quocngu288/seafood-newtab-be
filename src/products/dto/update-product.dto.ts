@@ -10,6 +10,7 @@ import {
   ValidateNested,
 } from 'class-validator';
 import { ProductTranslationDto } from './product-translation.dto';
+import { ProductGridPositionDto } from './product-grid-position.dto';
 
 export class UpdateProductTranslationDto extends PartialType(
   ProductTranslationDto,
@@ -26,6 +27,16 @@ export class UpdateProductDto {
   @IsInt()
   @Min(0)
   sortOrder?: number;
+
+  @IsOptional()
+  @IsString()
+  @MaxLength(80)
+  categoryKey?: string;
+
+  @IsOptional()
+  @ValidateNested()
+  @Type(() => ProductGridPositionDto)
+  gridPosition?: ProductGridPositionDto;
 
   @IsOptional()
   @IsObject()

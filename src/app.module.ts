@@ -8,6 +8,7 @@ import { AuthModule } from './auth/auth.module';
 import { ContactModule } from './contact/contact.module';
 import { DatabaseModule } from './database/database.module';
 import { NewsModule } from './news/news.module';
+import { ProductCategoriesModule } from './product-categories/product-categories.module';
 import { ProductsModule } from './products/products.module';
 import { UploadsModule } from './uploads/uploads.module';
 
@@ -30,6 +31,7 @@ import { UploadsModule } from './uploads/uploads.module';
     }),
     DatabaseModule,
     AuthModule,
+    ProductCategoriesModule,
     ProductsModule,
     NewsModule,
     ContactModule,

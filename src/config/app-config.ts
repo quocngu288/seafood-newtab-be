@@ -59,6 +59,11 @@ export function validateProductionEnv(configService: ConfigService): void {
     missing.push('MONGODB_URI (or MONGO_URL)');
   }
 
+  const apiPublicUrl = configService.get<string>('API_PUBLIC_URL')?.trim();
+  if (!apiPublicUrl || !apiPublicUrl.startsWith('https://')) {
+    missing.push('API_PUBLIC_URL (https://your-backend.up.railway.app)');
+  }
+
   if (missing.length > 0) {
     throw new Error(`Missing required env in production: ${missing.join(', ')}`);
   }

@@ -10,6 +10,7 @@ import {
   ValidateNested,
 } from 'class-validator';
 import { ProductTranslationDto } from './product-translation.dto';
+import { ProductGridPositionDto } from './product-grid-position.dto';
 
 export class CreateProductDto {
   @IsOptional()
@@ -18,10 +19,20 @@ export class CreateProductDto {
   thumbnailKey?: string;
 
   @IsOptional()
+  @IsString()
+  @MaxLength(80)
+  categoryKey?: string;
+
+  @IsOptional()
   @Type(() => Number)
   @IsInt()
   @Min(0)
   sortOrder?: number;
+
+  @IsOptional()
+  @ValidateNested()
+  @Type(() => ProductGridPositionDto)
+  gridPosition?: ProductGridPositionDto;
 
   @IsObject()
   @ValidateNested()

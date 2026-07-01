@@ -5,6 +5,8 @@ import { Model } from 'mongoose';
 import { join } from 'path';
 import { parseVndPrice } from '../common/format-vnd';
 import { NewsArticle, NewsArticleDocument } from '../news/schemas/news-article.schema';
+import { ProductCategoriesService } from '../product-categories/product-categories.service';
+import { DEFAULT_GRID_BY_PRODUCT_ID } from '../products/product-grid-position';
 import { Product, ProductDocument } from '../products/schemas/product.schema';
 
 type Locale = 'vi' | 'en';
@@ -52,6 +54,21 @@ const PRODUCT_THUMBNAILS: Record<number, string> = {
   12: 'certs/cert-right.jpg',
 };
 
+const PRODUCT_CATEGORY_BY_ID: Record<number, string> = {
+  1: 'other-cuts',
+  2: 'other-cuts',
+  3: 'other-cuts',
+  4: 'fillets',
+  5: 'other-cuts',
+  6: 'other-cuts',
+  7: 'other-cuts',
+  8: 'fillets',
+  9: 'whole-fish',
+  10: 'other-cuts',
+  11: 'fillets',
+  12: 'other-cuts',
+};
+
 @Injectable()
 export class SeedService implements OnModuleInit {
   private readonly logger = new Logger(SeedService.name);
@@ -61,14 +78,35 @@ export class SeedService implements OnModuleInit {
     private readonly productModel: Model<ProductDocument>,
     @InjectModel(NewsArticle.name)
     private readonly articleModel: Model<NewsArticleDocument>,
+    private readonly categoriesService: ProductCategoriesService,
   ) {}
 
   onModuleInit() {
-    void this.cleanupLegacyNewsFields()
+    void this.categoriesService
+      .seedDefaultsIfEmpty()
+      .then(() => this.cleanupLegacyNewsFields())
+      .then(() => this.backfillProductCategories())
+      .then(() => this.backfillProductGridPositions())
       .then(() => this.runSeedIfNeeded())
       .catch((error) => {
         this.logger.error('Seed failed', error);
       });
+  }
+
+  private async backfillProductCategories() {
+    const defaultKey = await this.categoriesService.getDefaultKey();
+    const products = await this.productModel.find().lean();
+
+    for (const product of products) {
+      if (product.categoryKey) continue;
+
+      const categoryKey = PRODUCT_CATEGORY_BY_ID[product.id] ?? defaultKey;
+
+      await this.productModel.updateOne(
+        { id: product.id },
+        { $set: { categoryKey } },
+      );
+    }
   }
 
   private async cleanupLegacyNewsFields() {
@@ -89,6 +127,26 @@ export class SeedService implements OnModuleInit {
     if (result.modifiedCount > 0) {
       this.logger.log(
         `Removed legacy news fields from ${result.modifiedCount} article(s)`,
+      );
+    }
+  }
+
+  private async backfillProductGridPositions() {
+    const products = await this.productModel.find().lean();
+
+    for (const product of products) {
+      if (product.gridPosition?.col && product.gridPosition?.row) continue;
+
+      const gridPosition =
+        DEFAULT_GRID_BY_PRODUCT_ID[product.id] ?? {
+          col: 1,
+          row: 1,
+          tileSize: 'standard' as const,
+        };
+
+      await this.productModel.updateOne(
+        { id: product.id },
+        { $set: { gridPosition } },
       );
     }
   }
@@ -166,6 +224,8 @@ export class SeedService implements OnModuleInit {
     const vi = this.loadMessages('vi');
     const en = this.loadMessages('en');
 
+    const defaultKey = await this.categoriesService.getDefaultKey();
+
     for (const [index, viItem] of vi.pages.products.items.entries()) {
       const enItem = en.pages.products.items[index];
       if (!enItem) continue;
@@ -173,7 +233,13 @@ export class SeedService implements OnModuleInit {
       await this.productModel.create({
         id: viItem.id,
         thumbnailKey: PRODUCT_THUMBNAILS[viItem.id] ?? 'bg-slide.jpg',
+        categoryKey: PRODUCT_CATEGORY_BY_ID[viItem.id] ?? defaultKey,
         sortOrder: index,
+        gridPosition: DEFAULT_GRID_BY_PRODUCT_ID[viItem.id] ?? {
+          col: 1,
+          row: 1,
+          tileSize: 'standard',
+        },
         vi: {
           name: viItem.name,
           description: viItem.description,

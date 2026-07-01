@@ -18,9 +18,10 @@ export class UploadsService {
       return '';
     }
 
-    const base =
+    const base = (
       this.configService.get<string>('API_PUBLIC_URL') ??
-      `http://localhost:${this.configService.get<string>('PORT') ?? 3001}`;
+      `http://localhost:${this.configService.get<string>('PORT') ?? 3002}`
+    ).replace(/\/$/, '');
 
     const path = relativePath.startsWith('/') ? relativePath : `/${relativePath}`;
     return `${base}${path}`;

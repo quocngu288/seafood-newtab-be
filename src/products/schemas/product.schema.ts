@@ -1,5 +1,22 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { HydratedDocument } from 'mongoose';
+import {
+  DEFAULT_PRODUCT_GRID_POSITION,
+  type ProductGridPosition,
+  type ProductTileSize,
+} from '../product-grid-position';
+
+@Schema({ _id: false })
+export class ProductGridPositionSchema implements ProductGridPosition {
+  @Prop({ default: 1 })
+  col: number;
+
+  @Prop({ default: 1 })
+  row: number;
+
+  @Prop({ default: 'standard' })
+  tileSize: ProductTileSize;
+}
 
 @Schema({ _id: false })
 export class ProductTranslationContent {
@@ -30,8 +47,17 @@ export class Product {
   @Prop({ default: 'bg-slide.jpg' })
   thumbnailKey: string;
 
+  @Prop({ default: '' })
+  categoryKey: string;
+
   @Prop({ default: 0 })
   sortOrder: number;
+
+  @Prop({
+    type: ProductGridPositionSchema,
+    default: () => ({ ...DEFAULT_PRODUCT_GRID_POSITION }),
+  })
+  gridPosition: ProductGridPosition;
 
   @Prop({ type: ProductTranslationContent, required: true })
   vi: ProductTranslationContent;
