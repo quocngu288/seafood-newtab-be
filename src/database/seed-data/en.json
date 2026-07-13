@@ -51,7 +51,7 @@
       "description": "Natural fish farming areas meeting standards, ensuring fresh and clean raw materials for production."
     },
     "fillets": {
-      "title": "Fish Fillets",
+      "title": "Products",
       "description": "Pangasius Fillets, Pangasius Value added, Pangasius Fish Meal & Fish Oil, Pangasius Others.....",
       "cta": "See more"
     }
@@ -163,13 +163,7 @@
       "reliable partner in aquaculture, processing and exporting",
       "seafood"
     ],
-    "certifications": [
-      "HACCP",
-      "BRC",
-      "HALAL",
-      "ISO 22000",
-      "GLOBALG.A.P"
-    ]
+    "certifications": ["HACCP", "BRC", "HALAL", "ISO 22000", "GLOBALG.A.P"]
   },
   "pages": {
     "about": {
